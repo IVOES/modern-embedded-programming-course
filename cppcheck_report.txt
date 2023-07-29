@@ -1,0 +1,503 @@
+lesson-01/main.c:24:5: style: Variable 'counter' is assigned a value that is never used. [unreadVariable]
+    ++counter;
+    ^
+lesson-11/main.c:44:23: style: Condition '(int32_t)u32e>-1' is always true [knownConditionTrueFalse]
+    if ((int32_t)u32e > -1) {
+                      ^
+lesson-11/main.c:33:12: note: Assignment 'u16c=40000U', assigned value is 40000
+    u16c = 40000U;
+           ^
+lesson-11/main.c:36:27: note: Assignment 'u32e=(uint32_t)u16c+u16d', assigned value is 70000
+    u32e = (uint32_t)u16c + u16d;
+                          ^
+lesson-11/main.c:44:23: note: Condition '(int32_t)u32e>-1' is always true
+    if ((int32_t)u32e > -1) {
+                      ^
+lesson-11/main.c:53:25: style: Condition '(uint8_t)(~u8a)==0x00U' is always true [knownConditionTrueFalse]
+    if ((uint8_t)(~u8a) == 0x00U) {
+                        ^
+lesson-11/main.c:51:11: note: Assignment 'u8a=0xffU', assigned value is 255
+    u8a = 0xffU;
+          ^
+lesson-11/main.c:53:25: note: Condition '(uint8_t)(~u8a)==0x00U' is always true
+    if ((uint8_t)(~u8a) == 0x00U) {
+                        ^
+lesson-11/main.c:34:10: style: Variable 'u16d' is reassigned a value before the old one has been used. [redundantAssignment]
+    u16d = 30000U;
+         ^
+lesson-11/main.c:30:10: note: u16d is assigned
+    u16d = u16c;
+         ^
+lesson-11/main.c:34:10: note: u16d is overwritten
+    u16d = 30000U;
+         ^
+lesson-11/main.c:51:9: style: Variable 'u8a' is reassigned a value before the old one has been used. [redundantAssignment]
+    u8a = 0xffU;
+        ^
+lesson-11/main.c:45:13: note: u8a is assigned
+        u8a = 1U;
+            ^
+lesson-11/main.c:51:9: note: u8a is overwritten
+    u8a = 0xffU;
+        ^
+lesson-11_msp430/main.c:41:23: style: Condition '(int32_t)u32e>-1' is always true [knownConditionTrueFalse]
+    if ((int32_t)u32e > -1) {
+                      ^
+lesson-11_msp430/main.c:30:12: note: Assignment 'u16c=40000U', assigned value is 40000
+    u16c = 40000U;
+           ^
+lesson-11_msp430/main.c:33:27: note: Assignment 'u32e=(uint32_t)u16c+u16d', assigned value is 70000
+    u32e = (uint32_t)u16c + u16d;
+                          ^
+lesson-11_msp430/main.c:41:23: note: Condition '(int32_t)u32e>-1' is always true
+    if ((int32_t)u32e > -1) {
+                      ^
+lesson-11_msp430/main.c:50:25: style: Condition '(uint8_t)(~u8a)==0x00U' is always true [knownConditionTrueFalse]
+    if ((uint8_t)(~u8a) == 0x00U) {
+                        ^
+lesson-11_msp430/main.c:48:11: note: Assignment 'u8a=0xffU', assigned value is 255
+    u8a = 0xffU;
+          ^
+lesson-11_msp430/main.c:50:25: note: Condition '(uint8_t)(~u8a)==0x00U' is always true
+    if ((uint8_t)(~u8a) == 0x00U) {
+                        ^
+lesson-11_msp430/main.c:31:10: style: Variable 'u16d' is reassigned a value before the old one has been used. [redundantAssignment]
+    u16d = 30000U;
+         ^
+lesson-11_msp430/main.c:27:10: note: u16d is assigned
+    u16d = u16c;
+         ^
+lesson-11_msp430/main.c:31:10: note: u16d is overwritten
+    u16d = 30000U;
+         ^
+lesson-11_msp430/main.c:48:9: style: Variable 'u8a' is reassigned a value before the old one has been used. [redundantAssignment]
+    u8a = 0xffU;
+        ^
+lesson-11_msp430/main.c:42:13: note: u8a is assigned
+        u8a = 1U;
+            ^
+lesson-11_msp430/main.c:48:9: note: u8a is overwritten
+    u8a = 0xffU;
+        ^
+lesson-14/startup_tm4c.c:3:28: error: syntax error: ".intvec" = [syntaxError]
+int const __vector_table[] @ ".intvec" = {
+                           ^
+lesson-15/startup_tm4c.c:9:28: error: syntax error: ".intvec" = [syntaxError]
+int const __vector_table[] @ ".intvec" = {
+                           ^
+lesson-16/startup_tm4c.c:9:28: error: syntax error: ".intvec" = [syntaxError]
+int const __vector_table[] @ ".intvec" = {
+                           ^
+lesson-17/startup_tm4c.c:9:28: error: syntax error: ".intvec" = [syntaxError]
+int const __vector_table[] @ ".intvec" = {
+                           ^
+lesson-18/startup_tm4c.c:9:28: error: syntax error: ".intvec" = [syntaxError]
+int const __vector_table[] @ ".intvec" = {
+                           ^
+lesson-19/startup_tm4c_gnu.c:373:35: error: Comparing pointers that point to different objects [comparePointers]
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                  ^
+lesson-19/startup_tm4c_gnu.c:359:21: note: Variable declared here.
+    extern unsigned __data_start;  /* start of .data in the linker script */
+                    ^
+lesson-19/startup_tm4c_gnu.c:373:16: note: Address of variable taken here.
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+               ^
+lesson-19/startup_tm4c_gnu.c:360:21: note: Variable declared here.
+    extern unsigned __data_end__;  /* end of .data in the linker script */
+                    ^
+lesson-19/startup_tm4c_gnu.c:373:37: note: Address of variable taken here.
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                    ^
+lesson-19/startup_tm4c_gnu.c:373:35: note: Comparing pointers that point to different objects
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                  ^
+lesson-19/startup_tm4c_gnu.c:378:36: error: Comparing pointers that point to different objects [comparePointers]
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                   ^
+lesson-19/startup_tm4c_gnu.c:362:21: note: Variable declared here.
+    extern unsigned __bss_start__; /* start of .bss in the linker script */
+                    ^
+lesson-19/startup_tm4c_gnu.c:378:16: note: Address of variable taken here.
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+               ^
+lesson-19/startup_tm4c_gnu.c:363:21: note: Variable declared here.
+    extern unsigned __bss_end__;   /* end of .bss in the linker script */
+                    ^
+lesson-19/startup_tm4c_gnu.c:378:38: note: Address of variable taken here.
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                     ^
+lesson-19/startup_tm4c_gnu.c:378:36: note: Comparing pointers that point to different objects
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                   ^
+lesson-20/startup_tm4c_gnu.c:373:35: error: Comparing pointers that point to different objects [comparePointers]
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                  ^
+lesson-20/startup_tm4c_gnu.c:359:21: note: Variable declared here.
+    extern unsigned __data_start;  /* start of .data in the linker script */
+                    ^
+lesson-20/startup_tm4c_gnu.c:373:16: note: Address of variable taken here.
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+               ^
+lesson-20/startup_tm4c_gnu.c:360:21: note: Variable declared here.
+    extern unsigned __data_end__;  /* end of .data in the linker script */
+                    ^
+lesson-20/startup_tm4c_gnu.c:373:37: note: Address of variable taken here.
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                    ^
+lesson-20/startup_tm4c_gnu.c:373:35: note: Comparing pointers that point to different objects
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                  ^
+lesson-20/startup_tm4c_gnu.c:378:36: error: Comparing pointers that point to different objects [comparePointers]
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                   ^
+lesson-20/startup_tm4c_gnu.c:362:21: note: Variable declared here.
+    extern unsigned __bss_start__; /* start of .bss in the linker script */
+                    ^
+lesson-20/startup_tm4c_gnu.c:378:16: note: Address of variable taken here.
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+               ^
+lesson-20/startup_tm4c_gnu.c:363:21: note: Variable declared here.
+    extern unsigned __bss_end__;   /* end of .bss in the linker script */
+                    ^
+lesson-20/startup_tm4c_gnu.c:378:38: note: Address of variable taken here.
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                     ^
+lesson-20/startup_tm4c_gnu.c:378:36: note: Comparing pointers that point to different objects
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                   ^
+lesson-30_cpp/rectangle.h:16:10: performance:inconclusive: Technically the member function 'Rectangle::draw' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void draw() const;
+         ^
+lesson-30_cpp/rectangle.cpp:13:17: note: Technically the member function 'Rectangle::draw' can be static (but you may consider moving to unnamed namespace).
+void Rectangle::draw() const {
+                ^
+lesson-30_cpp/rectangle.h:16:10: note: Technically the member function 'Rectangle::draw' can be static (but you may consider moving to unnamed namespace).
+    void draw() const;
+         ^
+lesson-31_cpp/circle.h:15:18: style: The function 'draw' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual void draw() const;
+                 ^
+lesson-31_cpp/shape.h:16:18: note: Virtual function in base class
+    virtual void draw() const;
+                 ^
+lesson-31_cpp/circle.h:15:18: note: Function in derived class
+    virtual void draw() const;
+                 ^
+lesson-31_cpp/circle.h:16:22: style: The function 'area' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual uint32_t area() const;
+                     ^
+lesson-31_cpp/shape.h:17:22: note: Virtual function in base class
+    virtual uint32_t area() const;
+                     ^
+lesson-31_cpp/circle.h:16:22: note: Function in derived class
+    virtual uint32_t area() const;
+                     ^
+lesson-31_cpp/rectangle.h:16:18: style: The function 'draw' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual void draw() const;
+                 ^
+lesson-31_cpp/shape.h:16:18: note: Virtual function in base class
+    virtual void draw() const;
+                 ^
+lesson-31_cpp/rectangle.h:16:18: note: Function in derived class
+    virtual void draw() const;
+                 ^
+lesson-31_cpp/rectangle.h:17:22: style: The function 'area' overrides a function in a base class but is not marked with a 'override' specifier. [missingOverride]
+    virtual uint32_t area() const;
+                     ^
+lesson-31_cpp/shape.h:17:22: note: Virtual function in base class
+    virtual uint32_t area() const;
+                     ^
+lesson-31_cpp/rectangle.h:17:22: note: Function in derived class
+    virtual uint32_t area() const;
+                     ^
+lesson-34/main.c:38:19: style: Unused variable: err [unusedVariable]
+            INT8U err; /* uC/OS-II error status */
+                  ^
+lesson-34/main.c:72:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-34/uc_ao.c:104:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-34/uc_ao.c:126:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-34/uc_ao.c:137:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-35/main.c:40:27: style: Unused variable: err [unusedVariable]
+                    INT8U err; /* uC/OS-II error status */
+                          ^
+lesson-35/main.c:66:27: style: Unused variable: err [unusedVariable]
+                    INT8U err; /* uC/OS-II error status */
+                          ^
+lesson-35/main.c:103:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-35/uc_ao.c:104:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-35/uc_ao.c:126:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-35/uc_ao.c:137:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-36/main.c:96:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-36/uc_ao.c:104:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-36/uc_ao.c:126:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-36/uc_ao.c:137:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-38/main.c:134:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-38/uc_ao.c:104:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-38/uc_ao.c:126:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-38/uc_ao.c:137:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-39/main.c:138:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-39/uc_ao.c:131:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-39/uc_ao.c:153:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-39/uc_ao.c:164:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-39_smc/main.c:16:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-39_smc/uc_ao.c:104:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-39_smc/uc_ao.c:126:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-39_smc/uc_ao.c:137:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-40/main.c:5:1: error: There is an unknown macro here somewhere. Configuration is required. If Q_DEFINE_THIS_MODULE is a macro then please configure it. [unknownMacro]
+Q_DEFINE_THIS_MODULE("main") /* this module name for Q_ASSERT() */
+^
+lesson-40_ucao/main.c:186:11: style: Unused variable: err [unusedVariable]
+    INT8U err;
+          ^
+lesson-40_ucao/uc_ao.c:135:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-40_ucao/uc_ao.c:157:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-40_ucao/uc_ao.c:168:16: style: Unused variable: cpu_sr [unusedVariable]
+    OS_CPU_SR  cpu_sr;
+               ^
+lesson-45/main.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
+tests/clz/delay.h:149:23: style: Opposite expression on both sides of '&'. [oppositeExpression]
+    return clz_lkup[x & -x] - n;
+                      ^
+tests/clz/delay.h:266:7: style: Opposite expression on both sides of '&='. [oppositeExpression]
+    x &= -x; /* isolate leftmost 1-bit in x*/
+      ^
+tests/clz/delay.h:172:14: style: Local variable 't' shadows outer variable [shadowVariable]
+    uint32_t t;
+             ^
+tests/clz/main.c:34:16: note: Shadowed declaration
+Triangle const t = {
+               ^
+tests/clz/delay.h:172:14: note: Shadow variable
+    uint32_t t;
+             ^
+tests/clz/startup_tm4c.c:48:40: error: syntax error: ".intvec" = [syntaxError]
+__root handler const  __vector_table[] @ ".intvec" = {
+                                       ^
+tests/lesson19_cpp/bsp.cpp:11:5: style: C-style pointer casting [cstyleCast]
+    GPIOF_AHB->DATA_Bits[LED_BLUE] ^= LED_BLUE;
+    ^
+tests/lesson19_cpp/main.cpp:4:1: style: The class 'Foo' does not have a constructor although it has private member variables. [noConstructor]
+class Foo {
+^
+tests/lesson19_cpp/main.cpp:12:5: style: C-style pointer casting [cstyleCast]
+    SYSCTL->RCGCGPIO  |= (1U << 5); /* enable Run mode for GPIOF */
+    ^
+tests/lesson19_cpp/main.cpp:13:5: style: C-style pointer casting [cstyleCast]
+    SYSCTL->GPIOHBCTL |= (1U << 5); /* enable AHB for GPIOF */
+    ^
+tests/lesson19_cpp/main.cpp:14:5: style: C-style pointer casting [cstyleCast]
+    GPIOF_AHB->DIR |= (LED_RED | LED_BLUE | LED_GREEN);
+    ^
+tests/lesson19_cpp/main.cpp:15:5: style: C-style pointer casting [cstyleCast]
+    GPIOF_AHB->DEN |= (LED_RED | LED_BLUE | LED_GREEN);
+    ^
+tests/lesson19_cpp/main.cpp:25:9: style: C-style pointer casting [cstyleCast]
+        GPIOF_AHB->DATA_Bits[LED_GREEN] = LED_GREEN;
+        ^
+tests/lesson19_cpp/main.cpp:26:9: style: C-style pointer casting [cstyleCast]
+        GPIOF_AHB->DATA_Bits[LED_GREEN] = 0U;
+        ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:373:35: error: Comparing pointers that point to different objects [comparePointers]
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                  ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:359:21: note: Variable declared here.
+    extern unsigned __data_start;  /* start of .data in the linker script */
+                    ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:373:16: note: Address of variable taken here.
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+               ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:360:21: note: Variable declared here.
+    extern unsigned __data_end__;  /* end of .data in the linker script */
+                    ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:373:37: note: Address of variable taken here.
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                    ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:373:35: note: Comparing pointers that point to different objects
+    for (dst = &__data_start; dst < &__data_end__; ++dst, ++src) {
+                                  ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:378:36: error: Comparing pointers that point to different objects [comparePointers]
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                   ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:362:21: note: Variable declared here.
+    extern unsigned __bss_start__; /* start of .bss in the linker script */
+                    ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:378:16: note: Address of variable taken here.
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+               ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:363:21: note: Variable declared here.
+    extern unsigned __bss_end__;   /* end of .bss in the linker script */
+                    ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:378:38: note: Address of variable taken here.
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                     ^
+tests/lesson19_cpp/startup_tm4c_gnu.c:378:36: note: Comparing pointers that point to different objects
+    for (dst = &__bss_start__; dst < &__bss_end__; ++dst) {
+                                   ^
+tests/lesson24/miros.c:130:21: error: syntax error [syntaxError]
+    LDR           r1,=OS_curr
+                    ^
+tests/miros/miros.c:160:15: error: syntax error [syntaxError]
+    LDR     r1,=OS_curr       /* r1 := &OS_curr */
+              ^
+lesson-29_cpp/shape.h:6:1: error: The one definition rule is violated, different classes/structs have the same name 'Shape' [ctuOneDefinitionRuleViolation]
+class Shape {
+^
+lesson-30_cpp/shape.h:6:1: note: The one definition rule is violated, different classes/structs have the same name 'Shape'
+class Shape {
+^
+lesson-29_cpp/shape.h:6:1: note: The one definition rule is violated, different classes/structs have the same name 'Shape'
+class Shape {
+^
+lesson-30_cpp/rectangle.h:7:1: error: The one definition rule is violated, different classes/structs have the same name 'Rectangle' [ctuOneDefinitionRuleViolation]
+class Rectangle : public Shape { /* inherited Shape */
+^
+lesson-31_cpp/rectangle.h:7:1: note: The one definition rule is violated, different classes/structs have the same name 'Rectangle'
+class Rectangle : public Shape { /* inherited Shape */
+^
+lesson-30_cpp/rectangle.h:7:1: note: The one definition rule is violated, different classes/structs have the same name 'Rectangle'
+class Rectangle : public Shape { /* inherited Shape */
+^
+lesson-29_cpp/shape.h:6:1: error: The one definition rule is violated, different classes/structs have the same name 'Shape' [ctuOneDefinitionRuleViolation]
+class Shape {
+^
+lesson-31_cpp/shape.h:6:1: note: The one definition rule is violated, different classes/structs have the same name 'Shape'
+class Shape {
+^
+lesson-29_cpp/shape.h:6:1: note: The one definition rule is violated, different classes/structs have the same name 'Shape'
+class Shape {
+^
+lesson-34/bsp.c:75:0: style: The function 'App_TCBInitHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:70:0: style: The function 'App_TaskCreateHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:71:0: style: The function 'App_TaskDelHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:60:0: style: The function 'App_TaskIdleHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:72:0: style: The function 'App_TaskReturnHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:73:0: style: The function 'App_TaskStatHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:74:0: style: The function 'App_TaskSwHook' is never used. [unusedFunction]
+
+^
+lesson-34/bsp.c:25:0: style: The function 'App_TimeTickHook' is never used. [unusedFunction]
+
+^
+lesson-42/main.c:143:0: style: The function 'BSP_display' is never used. [unusedFunction]
+
+^
+lesson-42/main.c:147:0: style: The function 'BSP_exit' is never used. [unusedFunction]
+
+^
+lesson-28/bsp.c:104:0: style: The function 'BSP_ledGreenToggle' is never used. [unusedFunction]
+
+^
+lesson-19/startup_tm4c_gnu.c:455:0: style: The function 'Default_Handler' is never used. [unusedFunction]
+
+^
+lesson-42/main.c:170:0: style: The function 'QF_onClockTick' is never used. [unusedFunction]
+
+^
+lesson-46/bsp.c:334:0: style: The function 'QS_onCleanup' is never used. [unusedFunction]
+
+^
+lesson-42/main.c:177:0: style: The function 'QS_onCommand' is never used. [unusedFunction]
+
+^
+lesson-46/bsp.c:341:0: style: The function 'QS_onFlush' is never used. [unusedFunction]
+
+^
+lesson-46/bsp.c:337:0: style: The function 'QS_onGetTime' is never used. [unusedFunction]
+
+^
+lesson-46/bsp.c:380:0: style: The function 'QS_onReset' is never used. [unusedFunction]
+
+^
+lesson-46/bsp.c:278:0: style: The function 'QS_onStartup' is never used. [unusedFunction]
+
+^
+lesson-40/bsp.c:71:0: style: The function 'QV_onIdle' is never used. [unusedFunction]
+
+^
+lesson-27/bsp.c:98:0: style: The function 'QXK_onIdle' is never used. [unusedFunction]
+
+^
+lesson-39_smc/timebomb_sm.c:46:0: style: The function 'TimeBomb_ledBlueOff' is never used. [unusedFunction]
+
+^
+lesson-34/uc_ao.c:135:0: style: The function 'TimeEvent_disarm' is never used. [unusedFunction]
+
+^
+lesson-17_msp430/bsp.c:12:0: style: The function 'Timer0_Handler' is never used. [unusedFunction]
+
+^
+lesson-33/hellowin.c:18:0: style: The function 'WinMain' is never used. [unusedFunction]
+
+^
+lesson-45-nucleo/bsp.c:166:0: style: The function 'fputc' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
